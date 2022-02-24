@@ -1,6 +1,7 @@
 package edu.nerea.entornoCliente.mangadb.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,5 +32,20 @@ public class MangaController {
 		@GetMapping("/titulo/{titulo}")
 		public List<Manga> filtrarPorTitulo(@PathVariable("titulo")String titulo){
 			return serviceManga.filtrarPorTitulo(titulo);
+		}
+		
+		@GetMapping("/precio/asc")
+		public List<Manga> filtrarPorPrecioASC(){
+			return serviceManga.filtrarPorPrecioASC();
+		}
+		
+		@GetMapping("/precio/desc")
+		public List<Manga> filtrarPorPrecioDESC(){
+			return serviceManga.filtrarPorPrecioDESC();
+		}
+		
+		@GetMapping("/detalle/{id}")
+		public Optional<Manga> buscarPorId(@PathVariable("id")int id){
+			return serviceManga.buscarPorId(id);
 		}
 }

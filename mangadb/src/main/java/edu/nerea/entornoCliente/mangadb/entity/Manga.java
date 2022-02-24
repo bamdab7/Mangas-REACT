@@ -1,11 +1,16 @@
 package edu.nerea.entornoCliente.mangadb.entity;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,8 +26,10 @@ public class Manga {
 	private BigDecimal precio;
 	private String imagen;
 	
-	
-	
+	@ManyToMany(fetch=FetchType.EAGER)
+	@JoinTable(name="mangaautor", joinColumns= @JoinColumn(name="idmanga"),
+	inverseJoinColumns = @JoinColumn(name="idautor"))
+	private List<Autor> autores;
 	
 	public Manga() {
 		super();
@@ -71,6 +78,13 @@ public class Manga {
 	}
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
+	}
+	
+	public List<Autor> getAutores() {
+		return autores;
+	}
+	public void setAutores(List<Autor> autores) {
+		this.autores = autores;
 	}
 	@Override
 	public String toString() {

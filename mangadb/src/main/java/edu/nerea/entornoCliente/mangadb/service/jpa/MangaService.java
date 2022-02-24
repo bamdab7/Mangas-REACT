@@ -1,6 +1,8 @@
 package edu.nerea.entornoCliente.mangadb.service.jpa;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +31,21 @@ public class MangaService implements IMangaService {
 	@Override
 	public List<Manga> filtrarPorTitulo(String titulo) {
 		return repoManga.filtrarTitulo(titulo);
+	}
+
+	@Override
+	public Optional<Manga> buscarPorId(int id) {
+		return repoManga.findById(id);
+	}
+
+	@Override
+	public List<Manga> filtrarPorPrecioASC() {
+		return repoManga.filtrarPorPrecioASC();
+	}
+
+	@Override
+	public List<Manga> filtrarPorPrecioDESC() {
+		return repoManga.filtrarPorPrecioDESC();
 	}
 
 }

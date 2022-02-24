@@ -1,6 +1,7 @@
 package edu.nerea.entornoCliente.mangadb.service.jpa;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,18 @@ public class AutorService implements IAutorService {
 	@Override
 	public List<Autor> buscarAutores() {
 		return repoAutor.findAll();
+	}
+
+
+	@Override
+	public List<Autor> filtrarPorNombre(String nombre) {
+		return repoAutor.filtrarPorNombre(nombre);
+	}
+
+
+	@Override
+	public Optional<Autor> filtrarPorId(int id) {
+		return repoAutor.findById(id);
 	}
 
 }

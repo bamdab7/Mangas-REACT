@@ -15,4 +15,4 @@ public interface IMangaService { //aqui creo los metodos que vaya a utilizar
 	Optional<Manga> buscarPorId(int id);
 	List<Manga> filtrarPorPrecioASC();
 	List<Manga> filtrarPorPrecioDESC();
-}
+}	

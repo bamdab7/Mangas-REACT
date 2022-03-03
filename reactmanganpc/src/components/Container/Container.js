@@ -1,19 +1,47 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Product from '../Product/Product';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Product from '../Product/Product'
 
-export default function SimpleContainer() {
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
+export default function Container() {
     return (
-        <React.Fragment>
-            <CssBaseline />
-            <Container sx={{ margin: 2,mt:2, margin:"auto"}}  >
-                <Box sx={{ bgcolor: '#cfe8fc', height: '100vh', flexDirection:"row"}} >
-                    <Product/>
-                    <Product/>
-                </Box>
-            </Container>
-        </React.Fragment>
+        <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}  >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}  >
+                <Product/>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3} >
+                <Product/>
+            </Grid>
+        </Grid>
+    </Box>
     );
 }

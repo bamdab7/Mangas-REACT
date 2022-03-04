@@ -11,7 +11,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Header.css';
+
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -93,14 +95,17 @@ return (
                         Tienda de mangas
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                    <Button className="btnInicio" href="#" variant="contained" >Mangas</Button>
+                    <Tooltip title="Volver al inicio">
+                        <Button className="btnInicio" href="#" variant="contained" >Inicio</Button>
+                    </Tooltip>
+                    <Tooltip title="Listado de mangas">
+                        <Button className="btnInicio" href="#" variant="contained" >Mangas</Button>
+                    </Tooltip>
                 </Box>
 
                 <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Open settings">
-                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                        <   Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                        </IconButton>
+                    <Tooltip title="Carrito de la compra">
+                    <Button className="btnInicio" id="btnCompra" href="#" variant="contained" ><ShoppingCartIcon/></Button>
                     </Tooltip>
                 <Menu
                     sx={{ mt: '45px' }}

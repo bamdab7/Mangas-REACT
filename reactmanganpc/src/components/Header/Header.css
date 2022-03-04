@@ -1,7 +1,12 @@
 .fondo{ /* COLOR NAVEGADOR*/
-    background-color: #A67EC9;
+    background-color: #A67EC9 !important;
 }
 
 .btnInicio{ /*COLOR BOTONES*/
-    background-color: #C49BBB;
+    background-color: #C49BBB !important;
+    margin-right: 10px !important;
+}
+
+#btnCompra{ 
+    border-radius:15px;
 }

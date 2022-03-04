@@ -96,10 +96,10 @@ return (
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                     <Tooltip title="Volver al inicio">
-                        <Button className="btnInicio" href="#" variant="contained" >Inicio</Button>
+                        <Button className="btnInicio" href="/" variant="contained" >Inicio</Button>
                     </Tooltip>
                     <Tooltip title="Listado de mangas">
-                        <Button className="btnInicio" href="#" variant="contained" >Mangas</Button>
+                        <Button className="btnInicio" href="/mangas" variant="contained" >Mangas</Button>
                     </Tooltip>
                 </Box>
 

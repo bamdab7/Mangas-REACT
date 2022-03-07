@@ -1,8 +1,8 @@
 import './App.css';
 import Header from './components/Header/Header'; //importamos la clase header y le decimos el directorio
 import Container from './components/Container/Container';
-import Product from './components/Product/Product';
 import Inicio from './components/Inicio/Inicio';
+import Footer from './components/Footer/Footer';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,8 +20,8 @@ function App() {
               <Route path="/mangas" element={<Container/>}/>
               {/*falta ruta de carrito compra */}
           </Routes>
-         {/* <Product/>  */} 
-        </Router>  
+          <Footer/>
+        </Router>
       </div>
     );
 }

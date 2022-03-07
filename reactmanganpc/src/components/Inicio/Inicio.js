@@ -12,13 +12,16 @@ export default function Principal() {
                     <h1>Mangas destacados</h1>
                 </div>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
                 <Product/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
                 <Product/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
+                <Product/>
+            </Grid>
+            <Grid item xs={3}>
                 <Product/>
             </Grid>
             <Grid item xs={7}>

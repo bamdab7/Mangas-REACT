@@ -11,12 +11,13 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 
 const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
+    const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
@@ -49,19 +50,12 @@ export default function RecipeReviewCard() {
             image="/static/images/cards/paella.jpg"
             alt="Manga"
         />
-        <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            This impressive paella is a perfect party dish and a fun meal to cook
-            together with your guests. Add 1 cup of frozen peas along with the
-            mussels, if you like.
-            </Typography>
-        </CardContent>
         <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <RemoveRedEyeIcon />
             </IconButton>
             <IconButton aria-label="share">
-                <ShareIcon />
+                < AddShoppingCartIcon />
             </IconButton>
         </CardActions>
     </Card>

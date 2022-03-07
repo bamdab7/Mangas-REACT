@@ -18,7 +18,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Inicio/>}/>
               <Route path="/mangas" element={<Container/>}/>
-              
+              {/*falta ruta de carrito compra */}
           </Routes>
          {/* <Product/>  */} 
         </Router>  

@@ -1,0 +1,15 @@
+.tituloMangasDestacados{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+.textoInicio{
+    margin-left:2%;
+}
+
+.textopInicio{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

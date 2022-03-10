@@ -27,7 +27,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
     return (
     <Card sx={{ maxWidth: 300 }}>
         <CardHeader
@@ -41,13 +41,12 @@ export default function RecipeReviewCard() {
                     <MoreVertIcon />
                 </IconButton>
             }
-        title="Producto" //TITULO MANGA
-        subheader="Autor" //AUTOR 
+        title={titulo} //TITULO MANGA
+        subheader={precio} //AUTOR 
         />
         <CardMedia
             component="img"
-            height="194"
-            image="/static/images/cards/paella.jpg"
+            image={imagen}
             alt="Manga"
         />
         <CardActions disableSpacing>

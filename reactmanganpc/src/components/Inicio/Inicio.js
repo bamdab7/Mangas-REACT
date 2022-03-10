@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './Inicio.css';
 import Grid from '@mui/material/Grid';
-import Product from '../Product/Product';
 import ListImage from '../ListImage/ListImage';
+import MangasDestacados from '../MangasDestacados/MangasDestacados';
 
 export default function Principal() {
     return (
@@ -13,7 +13,7 @@ export default function Principal() {
                 </div>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                <Product/>
+                <MangasDestacados/>
             </Grid>
             
             <Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
@@ -31,7 +31,7 @@ export default function Principal() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={5} xl={5} >
                 <div className="list"> 
-                   <ListImage/> 
+                    <ListImage/> 
                 </div>
                 
             </Grid>

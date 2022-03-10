@@ -12,19 +12,11 @@ export default function Principal() {
                     <h1>Mangas destacados</h1>
                 </div>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Product/>
             </Grid>
-            <Grid item xs={3}>
-                <Product/>
-            </Grid>
-            <Grid item xs={3}>
-                <Product/>
-            </Grid>
-            <Grid item xs={3}>
-                <Product/>
-            </Grid>
-            <Grid item xs={7}>
+            
+            <Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
                 <div className="textoInicio">
                     <p className="textopInicio">Lorem ipsum dolor sit amet consectetur adipiscing elit varius, ligula donec nam volutpat lacus dis nisi. Rhoncus feugiat aliquam accumsan dictum dis nullam vestibulum duis nibh eu litora curae, ut sem ligula gravida id laoreet pellentesque dictumst nascetur primis ornare. Sociosqu eros torquent porta porttitor pretium volutpat, fermentum hendrerit purus fusce erat tempus, venenatis commodo ridiculus urna dis.
                     </p>
@@ -37,8 +29,11 @@ export default function Principal() {
                     {/* <p className="textopInicio">Lorem ipsum dolor sit amet consectetur adipiscing elit convallis feugiat integer condimentum fusce, primis auctor justo tortor potenti class et volutpat congue lectus scelerisque. Id laoreet nec vel mauris posuere egestas etiam cras mus, mattis ornare purus montes fermentum taciti pulvinar ut, mollis habitasse nam suscipit vehicula dapibus rutrum sed.</p>*/}
                 </div>
             </Grid>
-            <Grid item xs={5}>
-                <ListImage/>
+            <Grid item xs={12} sm={12} md={6} lg={5} xl={5} >
+                <div className="list"> 
+                   <ListImage/> 
+                </div>
+                
             </Grid>
         </Grid>
     );

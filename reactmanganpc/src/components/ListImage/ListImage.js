@@ -3,11 +3,13 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import './ListImage.css';
 
 export default function ListImage() {
     return (
-        <Box sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={3} gap={8}>
+        <Box  sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
+
+            <ImageList  variant="masonry" cols={3} gap={8}>
                 {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                 <img
@@ -20,6 +22,7 @@ export default function ListImage() {
                     </ImageListItem>
                 ))}
             </ImageList>
+
         </Box>
     );
 }

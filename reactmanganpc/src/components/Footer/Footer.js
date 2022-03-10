@@ -17,12 +17,12 @@ const Footer =()=>{
     <Box sx={{ flexGrow: 1 }}>
     <div className="footer">    
         <Grid container spacing={0.5}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={8} lg={6} xl={6}>
                 <p className="textoFooter">Lorem ipsum dolor sit amet consectetur.</p> 
                 <p className="textoFooter">Accumsan neque molestie luctus pellentesque blandit justo sollicitudis.</p>
                 <p className="textoFooter">Dis lobortis orci porttitor malesuada eget hac tellus aenean montes massa metus non.</p>
             </Grid>
-            <Grid className="producto" item xs={6}>
+            <Grid className="producto" item xs={12} sm={12} md={4} lg={6} xl={6}>
                 <Box sx={{ width: '50%' }}>
                     <Grid container spacing={1} rowSpacing={1.5}>
                         <Grid item xs={3}>

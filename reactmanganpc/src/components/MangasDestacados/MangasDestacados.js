@@ -15,7 +15,7 @@ const GetMangasDestacados = () => {
     const fetchMangasDestacados = () => {
         axios.get('http://localhost:8080/manga/mangas').then(res => {
             setMangasDestacados(res.data);
-            console.log(res.data);
+            //console.log(res.data);
         });
     }
 

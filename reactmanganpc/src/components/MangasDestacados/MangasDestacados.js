@@ -25,7 +25,7 @@ const GetMangasDestacados = () => {
 
     return mangasDestacados.map((mangaDestacado, index) => {
         console.log(mangaDestacado);
-        return  <Grid item xs={12} sm={1} md={5} lg={2} xl={2} sx={{ mx: "auto", width: 200 }}>
+        return  <Grid item xs={12} sm={5} md={3} lg={2} xl={2} sx={{ mx: "auto", width: 100 }}>
                     <Manga key={mangaDestacado.id} manga={mangaDestacado}/>
                 </Grid>
     })

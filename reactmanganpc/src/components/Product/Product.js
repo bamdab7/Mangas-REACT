@@ -31,16 +31,6 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
     return (
     <Card sx={{ maxWidth: 300 }}>
         <CardHeader
-            avatar={
-                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                    *
-                </Avatar>
-            }
-            action={
-                <IconButton aria-label="settings">
-                    <MoreVertIcon />
-                </IconButton>
-            }
         title={titulo} //TITULO MANGA
         subheader={precio} //AUTOR 
         />

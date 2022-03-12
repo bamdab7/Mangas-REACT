@@ -13,7 +13,7 @@ const GetMangasDestacados = () => {
     const [mangasDestacados, setMangasDestacados] = useState([]);
 
     const fetchMangasDestacados = () => {
-        axios.get('http://localhost:8080/manga/mangas').then(res => {
+        axios.get('http://localhost:8080/manga/destacado').then(res => {
             setMangasDestacados(res.data);
             //console.log(res.data);
         });

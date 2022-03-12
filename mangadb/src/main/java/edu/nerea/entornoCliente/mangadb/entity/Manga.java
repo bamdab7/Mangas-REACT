@@ -25,6 +25,7 @@ public class Manga {
 	private String saga;
 	private BigDecimal precio;
 	private String imagen;
+	private Boolean destacado;
 	
 	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="mangaautor", joinColumns= @JoinColumn(name="idmanga"),
@@ -34,7 +35,7 @@ public class Manga {
 	public Manga() {
 		super();
 	}
-	public Manga(Integer id, String titulo, String genero, String saga, BigDecimal precio, String imagen) {
+	public Manga(Integer id, String titulo, String genero, String saga, BigDecimal precio, String imagen,Boolean destacado) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -42,6 +43,7 @@ public class Manga {
 		this.saga = saga;
 		this.precio = precio;
 		this.imagen = imagen;
+		this.destacado=destacado;
 	}
 	public Integer getId() {
 		return id;
@@ -80,6 +82,13 @@ public class Manga {
 		this.imagen = imagen;
 	}
 	
+	
+	public Boolean getDestacado() {
+		return destacado;
+	}
+	public void setDestacado(Boolean destacado) {
+		this.destacado = destacado;
+	}
 	public List<Autor> getAutores() {
 		return autores;
 	}
@@ -89,8 +98,11 @@ public class Manga {
 	@Override
 	public String toString() {
 		return "Manga [id=" + id + ", titulo=" + titulo + ", genero=" + genero + ", saga=" + saga + ", precio=" + precio
-				+ ", imagen=" + imagen + "]";
+				+ ", imagen=" + imagen + ", destacado=" + destacado + "]";
 	}
+	
+	
+	
 	
 	
 	

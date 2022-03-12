@@ -22,7 +22,7 @@ const GetMangas=()=>{
 
     return mangas.map((manga,index) => {
         console.log(manga);
-        return <Grid item xs={12} sm={1} md={5} lg={2} xl={2} sx={{ms:"auto",width:200}}>
+        return <Grid item xs={12} sm={6} md={3} lg={3} xl={3} sx={{ms:"auto",width:200}}>
             <Manga key={manga.id} manga={manga}/>
         </Grid>
     })

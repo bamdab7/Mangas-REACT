@@ -48,4 +48,9 @@ public class MangaService implements IMangaService {
 		return repoManga.filtrarPorPrecioDESC();
 	}
 
+	@Override
+	public List<Manga> buscarDestacado() {
+		return repoManga.buscarDestacado();
+	}
+
 }

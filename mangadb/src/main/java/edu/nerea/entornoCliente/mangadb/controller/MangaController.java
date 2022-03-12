@@ -50,4 +50,9 @@ public class MangaController {
 		public Optional<Manga> buscarPorId(@PathVariable("id")int id){
 			return serviceManga.buscarPorId(id);
 		}
+		
+		@GetMapping("/destacado")
+		public List<Manga> buscarDestacado(){
+			return serviceManga.buscarDestacado();
+		}
 }

@@ -20,4 +20,8 @@ public interface MangaRepository extends JpaRepository<Manga, Integer> {
 	
 	@Query("SELECT m FROM Manga m ORDER BY m.precio DESC")
 	public List<Manga> filtrarPorPrecioDESC();
+	
+	
+	@Query("SELECT m FROM Manga m WHERE m.destacado is true")
+	public List<Manga> buscarDestacado();
 }

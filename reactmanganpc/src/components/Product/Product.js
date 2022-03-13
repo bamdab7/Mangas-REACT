@@ -40,10 +40,10 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
             alt="Manga"
         />
         <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
+            <IconButton aria-label="details" href={"/detalle/" + id} >
                 <RemoveRedEyeIcon />
             </IconButton>
-            <IconButton aria-label="share">
+            <IconButton aria-label="share" href="#">
                 < AddShoppingCartIcon />
             </IconButton>
         </CardActions>

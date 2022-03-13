@@ -3,6 +3,7 @@ import Header from './components/Header/Header'; //importamos la clase header y 
 import Container from './components/Container/Container';
 import Inicio from './components/Inicio/Inicio';
 import Footer from './components/Footer/Footer';
+import Detalle from './components/Detalle/Detalle';
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Inicio/>}/>
               <Route path="/mangas" element={<Container/>}/>
               {/*falta ruta de carrito compra */}
+              <Route path="/detalle" element={<Detalle/>}/>
           </Routes>
           <Footer/>
         </Router>

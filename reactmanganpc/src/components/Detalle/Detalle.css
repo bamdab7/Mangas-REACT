@@ -1,0 +1,15 @@
+.imagenPortada{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+    align-items: center;
+}
+.contenedorDetalle{
+    padding:2%;
+}
+.imagen{
+    width:45%;
+    border:5px double #C49BBB;
+    border-bottom-width:thick;
+    border-radius: 5px 10px;
+}

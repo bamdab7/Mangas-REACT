@@ -8,23 +8,21 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import Alert from '@mui/material/Alert';
-import Fab from '@mui/material/Fab';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EuroIcon from '@mui/icons-material/Euro';
-import PersonIcon from '@mui/icons-material/Person';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+
+import './Detalle.css';
 
 
 const Manga = ({manga: {id,titulo,genero,saga,precio,imagen}}) => {
 
     return (
-        <div className="contenedor">
+        <div className="contenedorDetalle">
         <Grid container spacing={3}>
             <Grid item xs={11} sm={5} md={5} lg={6} xl={6} sx={{ mx: "auto", width: 200 }}>
-                <div className="portada">
+                <div className="imagenPortada">
                     <img className="imagen" src={imagen} alt="img"/>
                 </div>
             </Grid>
@@ -34,9 +32,9 @@ const Manga = ({manga: {id,titulo,genero,saga,precio,imagen}}) => {
                     <List>
                         <ListItem>
                             <ListItemAvatar>
-                            <Avatar>
-                                <TheaterComedyIcon/>
-                            </Avatar>
+                                <Avatar>
+                                    <TheaterComedyIcon/>
+                                </Avatar>
                             </ListItemAvatar>
                             <ListItemText primary={genero}/>
                         </ListItem>
@@ -46,7 +44,7 @@ const Manga = ({manga: {id,titulo,genero,saga,precio,imagen}}) => {
                                 <LibraryBooksIcon/>
                             </Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary={saga}/>
+                            <ListItemText primary={"Serie: " + saga}/>
                         </ListItem>
                         <ListItem>
                             <ListItemAvatar>
@@ -54,13 +52,10 @@ const Manga = ({manga: {id,titulo,genero,saga,precio,imagen}}) => {
                                 <EuroIcon/>
                             </Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary={precio + "€"}/>
+                            <ListItemText primary={precio + " €"}/>
                         </ListItem>
                         <ListItem>
-                            <Alert severity="success">Disponible</Alert>
-                        </ListItem>
-                        <ListItem>
-                             {/* <Fab className="carrito" aria-label="add" onClick={() => {
+                            {/* <Fab className="carrito" aria-label="add" onClick={() => {
                                 onAdd(pelicula);
                             }}> */}
                                 <AddShoppingCartIcon/>

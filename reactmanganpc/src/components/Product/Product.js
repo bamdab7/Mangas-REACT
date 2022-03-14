@@ -14,7 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-
+import {Link} from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -40,9 +40,15 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
             alt="Manga"
         />
         <CardActions disableSpacing>
-            <IconButton aria-label="details" href={"/detalle/" + id} >
+            {/* <Link to = {'/detalle/id=${manga.id}'}>
+            <IconButton aria-label="details">
                 <RemoveRedEyeIcon />
             </IconButton>
+            </Link> */}
+        
+            <IconButton aria-label="details" href={"/detalle/" + id}>
+                <RemoveRedEyeIcon />
+            </IconButton> 
             <IconButton aria-label="share" href="#">
                 < AddShoppingCartIcon />
             </IconButton>

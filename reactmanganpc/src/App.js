@@ -20,7 +20,7 @@ function App() {
               <Route path="/" element={<Inicio/>}/>
               <Route path="/mangas" element={<Container/>}/>
               {/*falta ruta de carrito compra */}
-              <Route path="/detalle" element={<Detalle/>}/>
+              <Route path="/detalle/:id" element={<Detalle/>}/>
           </Routes>
           <Footer/>
         </Router>

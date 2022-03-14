@@ -1,21 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import Grid from '@mui/material/Grid';
-import Manga from '../Product/Product';
 import axios from 'axios';
-import {useLocation} from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 
+ const Manga = ({manga: {id,titulo,genero,saga,precio,imagen}}) => {
+
+    return (
+        <div>
+            <p>{id}</p>
+            <p>{titulo}</p>
+        </div>
+    );
+ }
 
     const GetDetalle=(props)=>{
-
         const[manga,setManga]= useState([]);
-        const{onAdd}=props;
-
-        const location=useLocation();
-        const {from}= location.state;
+        // const{onAdd}=props;
+        // const location=useLocation();
+        
 
         const fetchManga=()=>{
-            axios.get('http://localhost:8080/manga/detalle/' +from).then(res=>{
+            console.log("Fetching manga " + props.id)
+            axios.get('http://localhost:8080/manga/detalle/' + props.id).then(res=>{
+                console.log("Detalle " + JSON.stringify(res.data));
                 setManga(res.data);
                 
             });
@@ -30,7 +38,8 @@ import {useLocation} from 'react-router-dom';
                 <Grid containter spacing={2}>
                     <Grid item xs={11} sm={5} md={5} lg={6} xl={6} sx={{ms:"auto" , width: 100 }}>
                         <div>
-                            <img src={manga.imagen} alt="imagen_manga"/>
+                            <Manga manga={manga}/>
+                            {/* esto lo muestro como el objeto */}
                         </div>
                     </Grid>
                 </Grid>
@@ -38,13 +47,15 @@ import {useLocation} from 'react-router-dom';
         )
     }
 
-    export default function DetalleMangas(props){
 
+    export default function DetalleMangas(props){ 
         const{onAdd}=props;
-
+        const {id} = useParams();
+        //const {from}= location.state;
+        console.log("Id: " + id);
         return(
             <Grid>
-                <GetDetalle onAdd={onAdd}/>
+                <GetDetalle id={id} onAdd={onAdd}/>
             </Grid>
         )
     }

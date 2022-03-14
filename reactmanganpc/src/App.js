@@ -7,8 +7,7 @@ import Detalle from './components/Detalle/Detalle';
 import {
   BrowserRouter as Router,
   Routes,
-  Route, 
-  Link
+  Route
 } from 'react-router-dom';
 
 function App() {

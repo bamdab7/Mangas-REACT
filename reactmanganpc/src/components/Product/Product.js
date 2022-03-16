@@ -6,11 +6,12 @@ import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import './Product.css';
 
 
 export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
     return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 300 }} className="card">
         <CardHeader
         title={titulo} //TITULO MANGA
         subheader={precio} //AUTOR 

@@ -4,6 +4,7 @@ import Container from './components/Container/Container';
 import Inicio from './components/Inicio/Inicio';
 import Footer from './components/Footer/Footer';
 import Detalle from './components/Detalle/Detalle';
+import BuscarCategorias from './components/BuscarCategorias/BuscarCategorias';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +21,7 @@ function App() {
               <Route path="/mangas" element={<Container/>}/>
               {/*falta ruta de carrito compra */}
               <Route path="/detalle/:id" element={<Detalle/>}/>
+              <Route path="/manga/genero" element={<BuscarCategorias/>}/>
           </Routes>
           <Footer/>
         </Router>

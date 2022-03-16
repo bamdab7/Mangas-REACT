@@ -6,14 +6,7 @@ import Grid from '@mui/material/Grid';
 import Product from '../Product/Product';
 import './Container.css';
 import Mangas from '../Mangas/Mangas';
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
+import Categorias from '../Categorias/Categorias';
 
 export default function Container() {
     return (
@@ -22,6 +15,9 @@ export default function Container() {
                 <h1>Mangas</h1>
             </div>
         <Grid container spacing={3}>
+            <Grid item sm={12} md={12} lg={12} xl={12} >
+                <Categorias/>
+            </Grid>
             <Grid item sm={12} md={12} lg={12} xl={12} >
                 <Mangas/>
             </Grid>

@@ -8,7 +8,10 @@ import './Container.css';
 import Mangas from '../Mangas/Mangas';
 import Categorias from '../Categorias/Categorias';
 
-export default function Container() {
+export default function Container(props) {
+    
+    const{onAdd}=props;
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <div className="tituloMangas">
@@ -19,7 +22,7 @@ export default function Container() {
                 <Categorias/>
             </Grid>
             <Grid item sm={12} md={12} lg={12} xl={12} >
-                <Mangas/>
+                <Mangas ondAdd={onAdd}/>
             </Grid>
         </Grid>
     </Box>

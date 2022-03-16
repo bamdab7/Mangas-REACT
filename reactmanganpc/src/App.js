@@ -10,18 +10,44 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
+import {useState} from 'react';
+import Basket from './components/Basket/Basket';
 
 function App() {
+
+  const{cartItems, setCartItems} = useState([]);
+  //funcion que nos permite agregar al carrito 
+
+  const onAdd = (product) => {
+    const exist = cartItems.find(x => x.id === product.id);
+    if(exist) { //si existe el producto deberemos buscar el producto el el carrito e incrementar el numero
+      setCartItems(cartItems.map(x => x.id ===product.id ? {...exist,qty: exist.qty +1} : x //actualiza valores si hay mas de uno
+        )
+      ); 
+    } else { //si el producto no existe, lo añadimos al carro
+      setCartItems([...cartItems,{...product, qty: 1}]);
+    }
+  };
+  const onRemove=(product)=>{
+    const exist = cartItems.find((x)=>x.id === product.id);
+    if(exist.qty === 1){ //si hay producto necesito eliminarlo
+
+    }else{
+
+    }
+  };
+
     return (
       <div className="App">
         <Router>
           <Header/> 
           <Routes>
-              <Route path="/" element={<Inicio/>}/>
-              <Route path="/mangas" element={<Container/>}/>
+              <Route path="/" element={<Inicio/>} ondAdd={onAdd} />
+              <Route path="/mangas" element={<Container/>} ondAdd={onAdd} />
               {/*falta ruta de carrito compra */}
               <Route path="/detalle/:id" element={<Detalle/>}/>
               <Route path="/manga/genero" element={<BuscarCategorias/>}/>
+              <Route path="/carrito" element={<Basket items={cartItems} ondAdd={onAdd} />}/>
           </Routes>
           <Footer/>
         </Router>

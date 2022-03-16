@@ -9,7 +9,8 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import './Product.css';
 
 
-export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
+export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}, props) {
+    const{onAdd}=props;
     return (
     <Card sx={{ maxWidth: 300 }} className="card">
         <CardHeader
@@ -32,7 +33,7 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
             <IconButton aria-label="details" href={"/detalle/" + id}>
                 <RemoveRedEyeIcon />
             </IconButton> 
-            <IconButton aria-label="share" href="#">
+            <IconButton aria-label="share" onClick={()=>onAdd(manga)}>
                 < AddShoppingCartIcon />
             </IconButton>
         </CardActions>

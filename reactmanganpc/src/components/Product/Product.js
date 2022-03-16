@@ -14,7 +14,8 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}) {
     <Card sx={{ maxWidth: 300 }} className="card">
         <CardHeader
         title={titulo} //TITULO MANGA
-        subheader={precio} //AUTOR 
+        // subheader={precio} //AUTOR 
+        
         />
         <CardMedia
             component="img"

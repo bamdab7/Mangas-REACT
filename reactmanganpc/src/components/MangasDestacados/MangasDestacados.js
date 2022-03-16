@@ -9,7 +9,7 @@ import axios from 'axios'; //me permite coger cosas de la base de dato
 
 
 const GetMangasDestacados = () => {
-
+    
     const [mangasDestacados, setMangasDestacados] = useState([]);
 
     const fetchMangasDestacados = () => {
@@ -37,8 +37,5 @@ export default function MangasDestacados(){
         <Grid container spacing={2} >
             <GetMangasDestacados/>
         </Grid>
-        
-
-
     );
 }

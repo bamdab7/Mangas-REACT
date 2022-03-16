@@ -9,18 +9,18 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import './Product.css';
 
 
-export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}, props) {
-    const{onAdd}=props;
+export default function RecipeReviewCard(props) {
+    const{manga}=props;
     return (
     <Card sx={{ maxWidth: 300 }} className="card">
         <CardHeader
-        title={titulo} //TITULO MANGA
+        title={manga.titulo} //TITULO MANGA
         // subheader={precio} //AUTOR 
         
         />
         <CardMedia
             component="img"
-            image={imagen}
+            image={manga.imagen}
             alt="Manga"
         />
         <CardActions disableSpacing>
@@ -30,10 +30,10 @@ export default function RecipeReviewCard({manga: {id,precio,titulo,imagen}}, pro
             </IconButton>
             </Link> */}
         
-            <IconButton aria-label="details" href={"/detalle/" + id}>
+            <IconButton aria-label="details" href={"/detalle/" + manga.id}>
                 <RemoveRedEyeIcon />
             </IconButton> 
-            <IconButton aria-label="share" onClick={()=>onAdd(manga)}>
+            <IconButton aria-label="share">
                 < AddShoppingCartIcon />
             </IconButton>
         </CardActions>

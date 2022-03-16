@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import ListImage from '../ListImage/ListImage';
 import MangasDestacados from '../MangasDestacados/MangasDestacados';
 
-export default function Principal(props) {
-    const{onAdd}=props;
+export default function Principal() {
+    
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -14,7 +14,7 @@ export default function Principal(props) {
                 </div>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                <MangasDestacados ondAdd={onAdd}/>
+                <MangasDestacados/>
             </Grid>
             
             <Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
